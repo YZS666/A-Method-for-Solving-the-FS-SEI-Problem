@@ -1,5 +1,4 @@
-# A-Method-for-Solving-the-FS-SEI-Problem
-A Method for Solving the FS-SEI Problem.
+# Few-Shot Specific Emitter Identification Using Asymmetric Masked Auto-Encoder
 
 This is a PyTorch/GPU implementation of the paper [Few-Shot Specific Emitter Identification Using Asymmetric Masked Auto-Encoder](https://ieeexplore.ieee.org/document/10243409). If using relevant content, please cite this paper:
 ```
