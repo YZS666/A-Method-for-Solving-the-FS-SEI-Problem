@@ -19,9 +19,8 @@ This is a PyTorch/GPU implementation of the paper [Few-Shot Specific Emitter Ide
 
 ### Catalog
 
-- [x] Pre-training code
+- [x] Pre-training and Visualization code
 - [x] Fine-tuning code
-- [x] Visualization demo
 
 ### Pre-training
 * Start pre-training by running the pretrain.py file.
