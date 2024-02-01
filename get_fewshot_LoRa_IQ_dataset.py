@@ -8,7 +8,6 @@ from scipy import signal
 import math
 import json
 import h5py
-from dataset_preparation import ChannelIndSpectrogram
 
 def convert_to_I_Q_complex(data):
     '''Convert the loaded data to complex I and Q samples.'''
