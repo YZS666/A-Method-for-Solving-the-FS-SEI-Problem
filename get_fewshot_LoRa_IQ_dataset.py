@@ -59,6 +59,12 @@ def LoadDataset(file_path, dev_range, pkt_range):
 
     data = f[dataset_name][sample_index_list]
     data = convert_to_I_Q_complex(data)
+    # data = np.expand_dims(data, axis=1)
+    ChannelIndSpectrogramObj = ChannelIndSpectrogram()
+    # data = ChannelIndSpectrogramObj.channel_ind_spectrogram(data)
+    # data = data.transpose(0, 3, 1, 2)
+    # data = np.squeeze(data, axis=3)
+    # data = convert_to_I_Q_complex(data)
     label = label[sample_index_list]
 
     f.close()
@@ -82,6 +88,7 @@ def get_num_class_Sourcetraindata(num):
     dev_range = np.arange(0, 30, dtype=int)
     pkt_range = np.arange(0, 500, dtype=int)
     X_train, X_val, X_test, Y_train, Y_val, Y_test = Get_LoRa_IQDataset(file_path, dev_range, pkt_range)
+    # X_train, X_val, X_test, Y_train, Y_val, Y_test = Get_LoRa_spectrogram_Dataset(file_path, dev_range, pkt_range)
     train_index_shot = []
     val_index_shot = []
     for i in range(num):

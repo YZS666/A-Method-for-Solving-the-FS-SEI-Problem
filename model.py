@@ -1,7 +1,7 @@
 import torch
 from torch import nn
 import torch.nn.functional as F
-from complexcnn import ComplexConv
+from complexcnn import ComplexConv, ComplexConv_trans
 # from torchsummary import summary
 
 class Encoder(nn.Module):

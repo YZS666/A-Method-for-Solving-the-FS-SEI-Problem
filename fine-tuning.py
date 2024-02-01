@@ -4,8 +4,9 @@ from torch.nn import functional as F
 from torch.utils.data import TensorDataset, DataLoader
 from torch.optim.lr_scheduler import CosineAnnealingLR, LambdaLR
 from torch.utils.tensorboard import SummaryWriter
-from model import Classifier
+from model import Encoder, Decoder, Classifier
 from get_fewshot_LoRa_IQ_dataset import *
+
 import random
 import pandas as pd
 import os
@@ -37,6 +38,7 @@ def train(encoder,
     device = torch.device("cuda:" + str(device_num))
     loss_ce = 0
     correct = 0
+    mse_loss = F.mse_loss
     for data_label in dataloader:
         data, target = data_label
         target = target.long()
@@ -50,6 +52,7 @@ def train(encoder,
         z = encoder(data)
         logits = F.log_softmax(classifier(z))
         target = np.squeeze(target, axis=1)
+        # loss_ce_batch = F.nll_loss(logits, target)
         loss_ce_batch = F.nll_loss(logits, target)
         loss_ce_batch.backward()
         optim_encoder.step()
@@ -133,6 +136,7 @@ def Test(encoder, classifier, test_dataloader):
 
             z  = encoder(data)
             logits = F.log_softmax(classifier(z), dim=1)
+            # target = np.squeeze(target, axis=1)
             test_loss += loss(logits, target).item()
             pred = logits.argmax(dim=1, keepdim=True)
             correct += pred.eq(target.view_as(pred)).sum().item()
@@ -180,7 +184,7 @@ def train_and_validation(encoder,
               device_num,
               writer)
         validation_loss = validation(encoder, classifier, val_dataloader, epoch, device_num, writer)
-        if epoch == 1:
+        if epoch ==  1:
             current_min_test_loss = validation_loss
         if validation_loss < current_min_test_loss:
             print("The validation loss is improved from {} to {}, new model weight is saved.".format(
@@ -191,6 +195,8 @@ def train_and_validation(encoder,
         else:
             print("The validation loss is not improved.")
         print("------------------------------------------------")
+    # torch.save(encoder, encoder_save_path)
+    # torch.save(classifier, classifier_save_path)
 
 class Config:
     def __init__(
@@ -226,6 +232,7 @@ def main(RANDOM_SEED):
     device = torch.device("cuda:" + str(conf.device_num))
     writer = SummaryWriter("logs")
 
+    # RANDOM_SEED = 300  # any random number
     set_seed(RANDOM_SEED)
     X_train, X_val, Y_train, Y_val = get_num_class_Targettrainfinetunedata(conf.n_classes, conf.k_shot)
 
