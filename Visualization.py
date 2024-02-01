@@ -61,7 +61,7 @@ def get_accuracy_score(y_true, y_pred):
     from sklearn.utils.linear_assignment_ import linear_assignment
     ind = linear_assignment(w.max() - w)
     acc = sum([w[i, j] for i, j in ind]) * 1.0 / y_pred.size
-    print('ACC = ', acc)
+    print('AC = ', acc)
     return acc
 
 def get_silhouette_score(x_test_feature, y_test):
@@ -75,7 +75,6 @@ def get_classification_report(x_test_feature, y_test):
 
 def main():
     num = [0,30]
-
     X_test, Y_test = get_num_class_Sourcetestdata(num)
     test_dataset = TensorDataset(torch.Tensor(X_test), torch.Tensor(Y_test))
     test_dataloader = DataLoader(test_dataset, batch_size=64, shuffle=True)
