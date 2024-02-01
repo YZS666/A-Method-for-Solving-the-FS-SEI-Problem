@@ -134,7 +134,6 @@ def validation(encoder, decoder, test_dataloader, epoch, device_num, writer):
     km = KMeans(n_clusters=30, n_init=30)
     km.fit(eval_tsne_embeds)
     cluster_target = km.predict(eval_tsne_embeds)
-    # ac = get_accuracy_score(real_target, cluster_target)
     sc = metrics.silhouette_score(X_test_embedding_feature_map, cluster_target)
 
     fmt = '\nValidation set: SC: {:.8f}\n'
