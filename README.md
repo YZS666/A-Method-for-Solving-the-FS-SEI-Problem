@@ -1,7 +1,7 @@
 # Few-Shot Specific Emitter Identification Using Asymmetric Masked Auto-Encoder
 
 <p align="center">
-  <img src="https://github.com/YZS666/A-Method-for-Solving-the-FS-SEI-Problem/blob/main/AMAE_FS_SEI.jpg?raw=true" width="480">
+  <img src="https://github.com/YZS666/A-Method-for-Solving-the-FS-SEI-Problem/tree/main/Visualization/AMAE_FS_SEI.jpg?raw=true" width="480">
 </p>
 
 This is a PyTorch/GPU implementation of the paper [Few-Shot Specific Emitter Identification Using Asymmetric Masked Auto-Encoder](https://ieeexplore.ieee.org/document/10243409). If using relevant content, please cite this paper:
@@ -34,7 +34,19 @@ This is a PyTorch/GPU implementation of the paper [Few-Shot Specific Emitter Ide
 
 ### Clustering performance of pre-training based on AMAE
 *  Semantic feature visualization after pre-training on LoRa dataset with 30 categories (left: feature visualization of AMAE on LoRa dataset; right: feature visualization of AMAE on WiFi dataset)
-![image](https://user-images.githubusercontent.com/107237593/211043674-bd5b21e6-e5f7-4208-9298-787d90820bf4.png)
-![image](https://user-images.githubusercontent.com/107237593/211043693-e96c4216-1498-4445-a9d1-2d4c3a171a1b.png)
+![image](https://github.com/YZS666/A-Method-for-Solving-the-FS-SEI-Problem/blob/main/Visualization/t-SNE_LoRa.jpg)
+![image](https://github.com/YZS666/A-Method-for-Solving-the-FS-SEI-Problem/blob/main/Visualization/t-SNE_WiFi.jpg)
+*  Cluster performance indicators of silhouette coefficient (SC), clustering accuracy (AC), normalized mutual information (NMI) and adjusting mutual information (AMI)
+|	Dataset	|	LoRa	|	WiFi	|	|
+|	SC	|	-0.0999	|	-0.0030	|
+|	AC	|	0.0860	|	0.4277	|
+|	NMI	|	0.0939	|	0.5092	|
+|	AMI	|	-0.0002	|	0.3142	|
+
+### Few-shot fine-tuning results using AMAE method under LoRa and WiFi datasets after 100 Monte Carlo experiments
+|	Dataset	|	LoRa	|	WiFi	|	|
+|	10-shot	|	4.80%	|	60.39%	|
+|	20-shot	|	15.30%	|	91.92%	|
+
 
 
