@@ -35,8 +35,11 @@ This is a PyTorch/GPU implementation of the paper [Few-Shot Specific Emitter Ide
 ### Clustering performance of pre-training based on AMAE
 *  Semantic feature visualization after pre-training on LoRa dataset with 30 categories (left: feature visualization of AMAE on LoRa dataset; right: feature visualization of AMAE on WiFi dataset)
 
-![image](https://github.com/YZS666/A-Method-for-Solving-the-FS-SEI-Problem/blob/main/Visualization/t-SNE_LoRa.jpg)
-![image](https://github.com/YZS666/A-Method-for-Solving-the-FS-SEI-Problem/blob/main/Visualization/t-SNE_WiFi.jpg)
+<p float="left">
+  <img src="https://github.com/YZS666/A-Method-for-Solving-the-FS-SEI-Problem/blob/main/Visualization/t-SNE_LoRa.jpg" width="400" />
+  <img src="https://github.com/YZS666/A-Method-for-Solving-the-FS-SEI-Problem/blob/main/Visualization/t-SNE_WiFi.jpg" width="400" /> 
+</p>
+
 
 *  Cluster performance indicators of silhouette coefficient (SC), clustering accuracy (AC), normalized mutual information (NMI) and adjusting mutual information (AMI)
 
