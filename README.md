@@ -37,14 +37,16 @@ This is a PyTorch/GPU implementation of the paper [Few-Shot Specific Emitter Ide
 ![image](https://github.com/YZS666/A-Method-for-Solving-the-FS-SEI-Problem/blob/main/Visualization/t-SNE_LoRa.jpg)
 ![image](https://github.com/YZS666/A-Method-for-Solving-the-FS-SEI-Problem/blob/main/Visualization/t-SNE_WiFi.jpg)
 *  Cluster performance indicators of silhouette coefficient (SC), clustering accuracy (AC), normalized mutual information (NMI) and adjusting mutual information (AMI)
-|	Dataset	|	LoRa	|	WiFi	|	|
+|	Dataset	|	LoRa	|	WiFi	|	
+|	----	|	----	|	----	|	----	|
 |	SC	|	-0.0999	|	-0.0030	|
 |	AC	|	0.0860	|	0.4277	|
 |	NMI	|	0.0939	|	0.5092	|
 |	AMI	|	-0.0002	|	0.3142	|
 
 ### Few-shot fine-tuning results using AMAE method under LoRa and WiFi datasets after 100 Monte Carlo experiments
-|	Dataset	|	LoRa	|	WiFi	|	|
+|	Dataset	|	LoRa	|	WiFi	|
+|	----	|	----	|	----	|	----	|
 |	10-shot	|	4.80%	|	60.39%	|
 |	20-shot	|	15.30%	|	91.92%	|
 
