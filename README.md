@@ -36,8 +36,8 @@ This is a PyTorch/GPU implementation of the paper [Few-Shot Specific Emitter Ide
 *  Semantic feature visualization after pre-training on LoRa dataset with 30 categories (left: feature visualization of AMAE on LoRa dataset; right: feature visualization of AMAE on WiFi dataset)
 
 <p float="left">
-  <img src="https://github.com/YZS666/A-Method-for-Solving-the-FS-SEI-Problem/blob/main/Visualization/t-SNE_LoRa.jpg" width="400" />
-  <img src="https://github.com/YZS666/A-Method-for-Solving-the-FS-SEI-Problem/blob/main/Visualization/t-SNE_WiFi.jpg" width="400" /> 
+  <img src="https://github.com/YZS666/A-Method-for-Solving-the-FS-SEI-Problem/blob/main/Visualization/t-SNE_LoRa.jpg" width="300" />
+  <img src="https://github.com/YZS666/A-Method-for-Solving-the-FS-SEI-Problem/blob/main/Visualization/t-SNE_WiFi.jpg" width="300" /> 
 </p>
 
 
