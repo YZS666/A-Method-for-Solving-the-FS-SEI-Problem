@@ -1,7 +1,7 @@
 # Few-Shot Specific Emitter Identification Using Asymmetric Masked Auto-Encoder
 
 <p align="center">
-  <img src="https://github.com/YZS666/A-Method-for-Solving-the-FS-SEI-Problem/tree/main/Visualization/AMAE_FS_SEI.jpg?raw=true" width="480">
+  <img src="https://github.com/YZS666/A-Method-for-Solving-the-FS-SEI-Problem/blob/main/Visualization/AMAE_FS_SEI.jpg?raw=true" width="480">
 </p>
 
 This is a PyTorch/GPU implementation of the paper [Few-Shot Specific Emitter Identification Using Asymmetric Masked Auto-Encoder](https://ieeexplore.ieee.org/document/10243409). If using relevant content, please cite this paper:
