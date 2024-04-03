@@ -15,7 +15,7 @@ This is a PyTorch/GPU implementation of the paper [Few-Shot Specific Emitter Ide
 }
 ```
 
-* Attention, you need to manually create three folders and name them as model_weight, test_result and Visualization.
+* Attention, you need to manually create three folders and name them as 'model_weight' and 'test_result'.
 * In addition, the dataset link used in this demo is https://ieee-dataport.org/open-access/lorarffidataset.
 
 ### Catalog
