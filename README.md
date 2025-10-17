@@ -58,4 +58,10 @@ This is a PyTorch/GPU implementation of the paper [Few-Shot Specific Emitter Ide
 |	20-shot	|	15.30%	|	91.92%	|
 
 
+## ⚖️ License and Copyright
 
+© 2025 Zhisheng Yao, FocusLab, Nanjing University of Posts and Telecommunications.  
+All rights reserved.
+
+This project is intended for **academic research and educational purposes only**.  
+**Unauthorized use, reproduction, or commercial distribution of this project or its components is strictly prohibited** without written permission from the author.
